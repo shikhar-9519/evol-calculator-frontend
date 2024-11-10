@@ -13,7 +13,7 @@ const PrankForm = () => {
   const [knowEachOther, setKnowEachOther] = useState('');
   const [message, setMessage] = useState('');
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const response = await fetch('http://localhost:5000/submit', {
       method: 'POST',

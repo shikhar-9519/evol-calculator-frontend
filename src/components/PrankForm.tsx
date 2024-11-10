@@ -15,7 +15,7 @@ const PrankForm = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const response = await fetch('http://localhost:5000/submit', {
+    const response = await fetch('https://evol-calculator-backend.onrender.com/submit', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name, crushName, height, crushHeight, age, crushAge, favColor, likeAbout, knowEachOther, message }),
